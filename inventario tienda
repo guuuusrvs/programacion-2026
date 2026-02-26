@@ -1,0 +1,41 @@
+# Producto.py
+class Producto:
+    def __init__(self, nombre, precio, stock):
+        self.nombre = nombre
+        self.precio = precio
+        self.stock = stock
+
+    def mostrar_producto(self):
+        print("Producto:", self.nombre)
+        print("Precio: $", self.precio)
+        print("Stock disponible:", self.stock)
+
+    def comprar(self, cantidad):
+        if cantidad <= self.stock:
+            total = cantidad * self.precio
+            self.stock = self.stock - cantidad
+            print("Compra realizada con éxito")
+            print("Total a pagar: $", total)
+        else:
+            print("No hay suficiente stock disponible")
+
+#menu.py
+
+producto1 = Producto("Playera", 250, 10)
+producto2 = Producto("zapatillas", 500, 20)
+opcion = 0
+while opcion != 3:
+    print("--- TIENDA ---")
+    print("1. Mostrar peoductos")
+    print("2. Comprar productos")
+    print("3. Salir")
+
+    opcion = int(input("Ingrese una opcion: "))
+    if opcion == 1:
+        producto1.mostrar_producto()
+        producto2.mostrar_producto()
+
+    if opcion == 2:
+        cantidad = int(input("Ingrese la cantidad que desea comprar:"))
+
+    print("Gracias por visitar la tienda")
