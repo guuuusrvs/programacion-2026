@@ -1,0 +1,17 @@
+Elabora un programa que genere una sucesión de números aleatorios en el intervalo [0.01,0.20], cuya suma sea menor que 1.50
+
+#Ejercicio 4
+import random
+
+suma = 0
+
+print("Numeros generados:")
+
+numero = random.uniform(0.01, 0.20)
+
+while suma + numero <= 1.50:
+    print(round(numero, 2))
+    suma = suma + numero
+    numero = random.uniform(0.01, 0.20)
+
+print("Suma total:", round(suma, 2))
