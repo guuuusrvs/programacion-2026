@@ -1,4 +1,5 @@
 Desarrollar un programa que calcule la suma de los dígitos de cualquier número entero positivo introducido por el usuario.
+
 #Ejercicio 2
 numero = int(input("Introduce un numero entero positivo: "))
 
