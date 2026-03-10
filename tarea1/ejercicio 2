@@ -1,0 +1,12 @@
+Desarrollar un programa que calcule la suma de los dígitos de cualquier número entero positivo introducido por el usuario.
+#Ejercicio 2
+numero = int(input("Introduce un numero entero positivo: "))
+
+suma = 0
+
+while numero > 0:
+    digito = numero % 10
+    suma = suma + digito
+    numero = numero // 10
+
+print("La suma de los dígitos es:", suma)
